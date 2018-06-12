@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from JKDatabaseSystem.view import hello
+from JKDatabaseSystem.predict import predict
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^hello/', hello),
+    url(r'^predict', predict),
+    # url(r'^$', hello)
 ]

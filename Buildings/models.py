@@ -26,12 +26,13 @@ class Sensors(models.Model):
     longitude = models.CharField(max_length=30, verbose_name='经度')
     height = models.CharField(max_length=30, verbose_name='高度')
     holesNum = models.IntegerField(default=0, verbose_name='测孔数')
+    internal = models.FloatField(default=0, verbose_name='测孔间距')
 
     class Meta:
         verbose_name = '传感器'
         verbose_name_plural = '传感器'
-    def __str__(self):
-        return self.sensorId
+    # def __str__(self):
+    #     return self.sensorId
 
 class Holes(models.Model):
     east = models.CharField(max_length=45, verbose_name='东')
